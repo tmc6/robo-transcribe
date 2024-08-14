@@ -22,7 +22,7 @@
         <div class="navbar-burger-line"></div>
       </div><img id="ifiki" src="assets/untitled_removebg_preview_1_.png" />
       <div data-gjs="navbar-items" class="navbar-items-c">
-      <nav id="incx" class="navbar-menu"><a id="i8xiu" class="navbar-menu-link">Signup</a><?php include "logoutButton.php"; ?><a href="http://videosubtitle/help.php" class="navbar-menu-link" id="izpx3g">Help</a><a id="iflwa" class="navbar-menu-link">Contact <span class="tooltiptext">Email: robot-translate@gmail.com</span></a><a href="http://videosubtitle/" id="iflwv" class="navbar-menu-link">Home</a></nav>
+      <nav id="incx" class="navbar-menu"><?php include "signupButton.php"; include "logoutButton.php"; ?><a href="http://videosubtitle/help.php" class="navbar-menu-link" id="izpx3g">Help</a><a id="iflwa" class="navbar-menu-link">Contact <span class="tooltiptext">Email: robot-translate@gmail.com</span></a><a href="http://videosubtitle/" id="iflwv" class="navbar-menu-link">Home</a></nav>
         
       </div>
     </div>
