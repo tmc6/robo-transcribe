@@ -8,6 +8,7 @@ encoding = 'utf-8'
 def main():
     connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
     channel = connection.channel()
+    channel.exchange_declare(exchange="delayed_exchange",auto_delete=False,exchange_type="x-delayed-message", arguments={'x-delayed-type': 'direct'})
     channel.queue_declare(queue='timeoutQueue', durable=True)
     channel.queue_bind(exchange='delayed_exchange',queue='timeoutQueue',routing_key="timeout")
     def callback(ch, method, properties, body):

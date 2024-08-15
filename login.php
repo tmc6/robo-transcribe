@@ -1,7 +1,4 @@
 <?php
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
 
 session_start();
 $mysqli = new mysqli("localhost","root","","Robo-Transcribe");
@@ -9,7 +6,7 @@ if ($mysqli -> connect_errno) {
     echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
     $_SESSION["login_error"]=1;
     header("Location: http://videosubtitle/userlogin.php");
-    sleep(5);
+    
     die();
     
   }
@@ -18,7 +15,6 @@ $password=$_POST["password"];
 if (!isset($username) || strlen($username)>10|| !isset($password)){
     $_SESSION["login_error"]=1;
     $mysqli->close();
-    sleep(5);
     header("Location: http://videosubtitle/userlogin.php");
     die();
 }
@@ -30,7 +26,8 @@ $data->execute();
 $data->store_result();
 if ($data !== false && $data->num_rows == 1) {
     // output data
-      $_SESSION["Username"]=$_POST["username"];
+      $_SESSION["Username"]=$username;
+      
       header("Location: http://videosubtitle/");
       die();
     

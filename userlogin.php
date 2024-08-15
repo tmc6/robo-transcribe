@@ -1,5 +1,5 @@
 <?php 
-if (session_status()==PHP_SESSION_ACTIVE && isset($_SESSION["username"])){
+if (session_status()==PHP_SESSION_ACTIVE && isset($_SESSION["Username"])){
 header("http://videosubtitle/");
 die();
 }

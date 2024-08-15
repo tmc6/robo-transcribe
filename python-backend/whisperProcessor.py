@@ -27,7 +27,7 @@ def main():
             result = model.transcribe(audio_path,initial_prompt="prompt", word_timestamps=True)
             word_options = {
             "highlight_words": False,
-            "max_line_count": 50,
+            "max_line_count": 5,
             "max_line_width": 3
             }
             srt_writer = get_writer("srt", output_dir)

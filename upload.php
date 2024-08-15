@@ -1,25 +1,25 @@
-<!doctype html>
+<?php 
+if(session_status() != 2){
+ session_start();
+} 
+?>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/videoReady.js"></script>
     <meta charset="utf-8">
     <title>Upload</title>
     <meta name="generator" content="GrapesJS Studio">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta property="og:type" content="website">
     <meta name="robots" content="index,follow">
+    
+
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body id="ieebk1">
-    <meta charset="utf-8" id="iqqnz" />
     <title>Home</title>
-    <meta name="generator" content="GrapesJS Studio" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta property="og:type" content="website" />
-    <meta name="robots" content="index,follow" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <form method="get"></form>
-    <form method="get"></form>
     <div class="navbar" id="ithoeh">
       <div data-gjs="navbar" class="navbar-container" id="i1xxis">
         <div class="navbar-burger">
@@ -45,5 +45,5 @@
     </section>
     <div id="i5gyjw" class="gjs-divider"></div>
   </body>
-  <script src="/js/videoReady.js"></script>
-</html>
+  
+  </html>

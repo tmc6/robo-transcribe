@@ -1,9 +1,14 @@
 <?php 
-if (session_status()==PHP_SESSION_ACTIVE && isset($_SESSION["username"])){
+if(session_status() != 2){
+ session_start();
+} 
+
+if (session_status()==2 && isset($_SESSION["username"])){
 header("http://videosubtitle/");
 die();
 }
 ?>
+
 <!doctype html>
 <html lang="en">
 

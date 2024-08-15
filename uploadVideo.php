@@ -1,10 +1,10 @@
 
 <?php
-session_start();
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
-include "upload.html";
+
+if(session_status() !== PHP_SESSION_ACTIVE){
+   session_start();
+}
+include "upload.php";
 flush();
 ob_flush();
 require_once __DIR__.'/vendor/autoload.php';
@@ -28,15 +28,14 @@ if ($_FILES["fileToUpload"]["size"] > 100000000) {
   echo "Sorry, your file is too large.";
   $uploadOk = 0;
 }
-
-if(!strtolower(end(explode(".",$target_file))) =="mp4") {
+$fileMeta=explode(".",$target_file);
+if(!strtolower(end($fileMeta)) =="mp4") {
   $uploadOK=0;
 }
 
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
   echo "Sorry, there was an error uploading your file. ".$_FILES["fileToUpload"]["error"];
-    sleep(4);
     session_destroy();
     header("Location: http://videosubtitle/");
 die();
@@ -52,7 +51,6 @@ die();
     
   } else {
     echo "Sorry, there was an error uploading your file. ".$_FILES["fileToUpload"]["error"];
-    sleep(4);
     session_destroy();
     header("Location: http://videosubtitle/");
 die();
