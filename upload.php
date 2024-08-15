@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    <div id="i1ydsl">Welcome to Robo-Translate!<br /><br /><br /></div>
+    <div id="i1ydsl">Welcome to Robo-Transcribe!<br /><br /><br /></div>
     <section id="ilml7n" class="gjs-section">
       <div id="i4jo41" class="gjs-container">
         <div id="i9wz66" class="loader"></div>

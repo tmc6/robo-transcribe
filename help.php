@@ -29,7 +29,7 @@
   </div>
   <form method="get" id="ijij2"></form>
   <form method="get" id="i5pmz"></form>
-  <div id="i9ed1">Welcome to Robo-Translate!<br /><br /><br /></div>
+  <div id="i9ed1">Welcome to Robo-Transcribe!<br /><br /><br /></div>
   <section class="gjs-section" id="i7udyk">
     <div class="gjs-container" id="iylqai">
       <div id="iqkn8v">FAQ</div>

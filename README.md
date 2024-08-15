@@ -1,5 +1,5 @@
 
-# Robo-Translate
+# Robo-Transcribe
 
 A website that automatically captions files using OpenAI's whisper.
 
@@ -17,8 +17,6 @@ Clone the project
 
 Go to the project directory
 
-
-
 Install WAMP or  Apache, MySQL and PHP separately
 
 ```bash
@@ -30,7 +28,7 @@ Install WAMP or  Apache, MySQL and PHP separately
   pip install pika 
 ```
 
-Install composer then in project directory:
+Install composer then run the following command in project directory:
 ```bash
 composer require php-amqplib/php-amqplib
 ```
@@ -49,8 +47,8 @@ rabbitmq-plugins enable rabbitmq_delayed_message_exchange
 Paste github project files into folder marked: C:\wamp64\www\ or apache www folder
 
 
-Run both backend python files before using the site.
-
+## Running
+Run the backend python files before using the site.
 
 Start the webserver and visit the locally hosted site
 

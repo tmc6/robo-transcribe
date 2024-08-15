@@ -4,7 +4,7 @@ ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
 session_start();
-$mysqli = new mysqli("localhost","root","","robo-translate");
+$mysqli = new mysqli("localhost","root","","Robo-Transcribe");
 if ($mysqli -> connect_errno) {
     echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
     $_SESSION["login_error"]=1;

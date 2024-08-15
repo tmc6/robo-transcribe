@@ -40,7 +40,7 @@
       </div>
       <form method="get" id="ijij2"></form>
       <form method="get" id="i5pmz"></form>
-      <div id="i9ed1">Welcome to Robo-Translate!<br/><br/><br/></div>
+      <div id="i9ed1">Welcome to Robo-Transcribe!<br/><br/><br/></div>
       <section id="ifevg" class="gjs-section">
          <div id="izwr1" class="gjs-container">
             <form method="post" enctype="multipart/form-data" action="uploadVideo.php" name="fileForm" id="ifwnh">

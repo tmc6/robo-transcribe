@@ -9,7 +9,7 @@ if (session_status()==PHP_SESSION_NONE){
 
 if (isset($_GET["nameCheck"]) && $_GET["nameCheck"]==True && isset($_GET["username"])) {
     $username = $_GET["username"];
-    $mysqli = new mysqli("localhost", "root", "", "robo-translate");
+    $mysqli = new mysqli("localhost", "root", "", "Robo-Transcribe");
     if ($mysqli->connect_errno) {
         echo "Failed to connect to MySQL: " . $mysqli->connect_error;
         $_SESSION["login_error"] = 1;
@@ -43,7 +43,7 @@ if (isset($_GET["nameCheck"]) && $_GET["nameCheck"]==True && isset($_GET["userna
     }
     $password=password_hash($password,PASSWORD_DEFAULT);
 
-    $mysqli = new mysqli("localhost", "root", "", "robo-translate");
+    $mysqli = new mysqli("localhost", "root", "", "Robo-Transcribe");
     if ($mysqli->connect_errno) {
         echo "Failed to connect to MySQL: " . $mysqli->connect_error;
         $_SESSION["login_error"] = 1;
