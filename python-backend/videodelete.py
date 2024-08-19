@@ -3,6 +3,7 @@ import pika
 import sys
 import json
 import logging
+from pathlib import Path
 
 encoding = 'utf-8'
 def main():
@@ -16,10 +17,10 @@ def main():
             var1=json.loads(str(body,encoding))
             var2=var1["originalName"]
             var3=var1["tempName"]
-            path1=os.path.join("C:\\wamp64\\www\\videoUpload\\uploads\\subtitledVideos\\"+str(var3),str(var2))
-            os.remove(path1)
-            path2=os.path.join("C:\\wamp64\\www\\videoUpload\\uploads\\subtitledVideos\\",str(var3))
-            os.rmdir(path2)
+            path1=Path(__file__).parents[1]/"uploads"/"subtitledVideos"/str(var3)/str(var2)
+            Path.unlink(path1)
+            path2=Path(__file__).parents[1]/"uploads"/"subtitledVideos"/str(var3)
+            Path.rmdir(path2)
         except:
             logging.exception("message")
     channel.basic_consume(queue='timeoutQueue', auto_ack=True, on_message_callback=callback)

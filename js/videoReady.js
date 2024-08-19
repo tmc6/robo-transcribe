@@ -15,7 +15,7 @@ $( document ).ready(function() {
         type : "POST",
         url : "http://videosubtitle/videoReady.php",
         success: function (videoName) {
-			console.log(videoName);
+			
 			videoNameJson=JSON.parse(videoName);
 			link1="http://videosubtitle/uploads/subtitledVideos/"+videoNameJson['tempName']+'/'+videoNameJson['originalName'];
 			html="<a style=\"text-decoration: none; color:white\" href='http://videosubtitle/uploads/subtitledVideos/"+videoNameJson['tempName']+'/'+videoNameJson['originalName']+'\' download=\'mySubtitledVideo\''+ "><button style='color: #ffffff; background-color: #2b2829;font-size: 14px;border-radius: 9px;padding: 20px 60px;cursor: pointer;position: relative;left: 36%;top: 120%;' type='button' id='i10k10' value='Download'/>Download</a>";

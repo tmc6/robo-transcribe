@@ -1,5 +1,5 @@
 <?php 
-if (session_status()==PHP_SESSION_ACTIVE && isset($_SESSION["Username"])){
+if (session_status()==2 && isset($_SESSION["Username"])){
 header("http://videosubtitle/");
 die();
 }
@@ -36,7 +36,7 @@ die();
       <form action="login.php" method="post" id="i3y0ym">
 
         <div id="id1rci"><label id="ipve0z">Username:</label><input name="username" type="text" id="iwo2xf" required></div>
-        <div id="pass"><label id="ihdl4o">Password:</label><input name="password" type="password" id="iun6cz" required></div> <?php session_start(); if (isset($_SESSION["login_error"])) {echo "<div id='loginerror'> *Invalid Username or Password </div>"; unset($_SESSION["login_error"]); }?> <input type="submit" value="Login" id="iv2s8q" />
+        <div id="pass"><label id="ihdl4o">Password:</label><input name="password" type="password" id="iun6cz" required></div> <?php include "loginErrors.php"; ?> <input type="submit" value="Login" id="iv2s8q" />
 
       </form>
     </div>

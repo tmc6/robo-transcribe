@@ -43,7 +43,7 @@ if(session_status() != 2){
         <div id="ifxtg9"><span id="i9fa2y">Your video is being processed! When it is ready a download button will appear and a unique link will be generated.</span><br /></div>
       </div>
     </section>
-    <div id="i5gyjw" class="gjs-divider"></div>
+    
   </body>
   
   </html>
